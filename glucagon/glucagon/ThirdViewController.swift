@@ -50,17 +50,24 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
             snapshot in
             let objects = JSON(snapshot.value)
             //print(objects)
-            user = objects["username"].string!
+            user = "\(objects["username"].string!)"
             self.userLabel.text = "Hello \(user)"
             self.userLabel.sizeToFit()
 
             var mDate = "";
             var item1 = "";
+            var item2 = "";
             var cals1 = "";
             for (index,subJson) in objects["meals"] {
-                mDate = subJson["date"].string!
-                item1 = subJson["item"].string!
+                mDate = "\(subJson["date"].string!)"
+                item1 = "\(subJson["item"].string!)"
+                //let index1 = item1.index(item1.startIndex, offsetBy: item1.length-2)
                 //print(subJson["nutrients"])
+               // let start = item2.index(item2.startIndex, offsetBy: 10)
+                //let end = item2.index(item2.startIndex, offsetBy: -3)
+                //let range = start..<end
+                //item1 = item2.substring(with: range)
+                print(item1)
             
                 for(index1, superJson) in subJson["nutrients"] {
                     if superJson["nutrient"].string!=="calories" {
@@ -99,7 +106,7 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
             let data = list[indexPath.row] as dayItem!
             //let image: UIImage = UIImage(data: NSData(contentsOfURL: NSURL(string: data.questionImage)!)!)!
             //cell.problemImageView.image = image
-            print(data?.date)
+            //print(data?.date)
             cell?.date.text = "Date: \(data?.date)"
             cell?.meal.text = "Meal: \(data?.item)"
             cell?.calories.text = "Calories: \(data?.cals)"
