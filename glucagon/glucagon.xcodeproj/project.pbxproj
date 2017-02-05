@@ -16,6 +16,7 @@
 		293022D51E4698F800D56FBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 293022D41E4698F800D56FBF /* GoogleService-Info.plist */; };
 		293D19771E46BF540093B368 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293D19761E46BF540093B368 /* ThirdViewController.swift */; };
 		29A690AE1E469F99001FAE21 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A690AD1E469F99001FAE21 /* SwiftyJSON.swift */; };
+		C73776191E46E0DD00BD5A78 /* dayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73776181E46E0DD00BD5A78 /* dayTableViewCell.swift */; };
 		D811CB9A4817660C1B0B14B4 /* Pods_glucagon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D4601434C33B1D1F27901D /* Pods_glucagon.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		293022D41E4698F800D56FBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		293D19761E46BF540093B368 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		29A690AD1E469F99001FAE21 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		C73776181E46E0DD00BD5A78 /* dayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dayTableViewCell.swift; sourceTree = "<group>"; };
 		EDA08D4036295E02D712D57E /* Pods-glucagon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-glucagon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-glucagon/Pods-glucagon.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +76,7 @@
 				293022C21E4698F100D56FBF /* FirstViewController.swift */,
 				293022C41E4698F100D56FBF /* SecondViewController.swift */,
 				293D19761E46BF540093B368 /* ThirdViewController.swift */,
+				C73776181E46E0DD00BD5A78 /* dayTableViewCell.swift */,
 				293022C61E4698F100D56FBF /* Main.storyboard */,
 				293022C91E4698F200D56FBF /* Assets.xcassets */,
 				293022CB1E4698F200D56FBF /* LaunchScreen.storyboard */,
@@ -227,6 +230,7 @@
 			files = (
 				293022C51E4698F100D56FBF /* SecondViewController.swift in Sources */,
 				293022C11E4698F100D56FBF /* AppDelegate.swift in Sources */,
+				C73776191E46E0DD00BD5A78 /* dayTableViewCell.swift in Sources */,
 				293D19771E46BF540093B368 /* ThirdViewController.swift in Sources */,
 				293022C31E4698F100D56FBF /* FirstViewController.swift in Sources */,
 				29A690AE1E469F99001FAE21 /* SwiftyJSON.swift in Sources */,
