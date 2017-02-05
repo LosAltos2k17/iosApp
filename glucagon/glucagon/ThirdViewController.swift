@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import Charts
+
 
 var user: String!
 
@@ -138,6 +138,9 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Dispose of any resources that can be recreated.
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     /*
     // MARK: - Navigation

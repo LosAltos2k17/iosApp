@@ -9,8 +9,21 @@
 import UIKit
 import Alamofire
 
-class SecondViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+var mainJSON : JSON = JSON.null;
 
+
+
+class SecondViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    @IBAction func addImage(_ sender: Any) {
+        
+        
+    }
+    @IBAction func removeImage(_ sender: Any) {
+    }
+    
+    @IBOutlet weak var no: UIButton!
+    @IBOutlet weak var yes: UIButton!
+    
     @IBAction func takePic(_ sender: Any) {
         print("pressed button");
         
@@ -69,14 +82,15 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
         let dataStr = imageData!.base64EncodedString(options: [.lineLength64Characters])
         print(dataStr)
         let parameters = ["pic":dataStr]
-        Alamofire.request("https://httpbin.org/post", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
-            
+        Alamofire.request("https://los-altos-hacks-2-nihaleg.c9users.io/pic", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
             if let JSON = response.result.value {
+                mainJSON = JSON as! JSON;
                 print (JSON)
             }
         }
-        
-
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
 
