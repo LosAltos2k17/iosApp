@@ -14,6 +14,7 @@
 		293022CA1E4698F200D56FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293022C91E4698F200D56FBF /* Assets.xcassets */; };
 		293022CD1E4698F200D56FBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293022CB1E4698F200D56FBF /* LaunchScreen.storyboard */; };
 		293022D51E4698F800D56FBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 293022D41E4698F800D56FBF /* GoogleService-Info.plist */; };
+		293D19771E46BF540093B368 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293D19761E46BF540093B368 /* ThirdViewController.swift */; };
 		29A690AE1E469F99001FAE21 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A690AD1E469F99001FAE21 /* SwiftyJSON.swift */; };
 		D811CB9A4817660C1B0B14B4 /* Pods_glucagon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D4601434C33B1D1F27901D /* Pods_glucagon.framework */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		293022CC1E4698F200D56FBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		293022CE1E4698F200D56FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		293022D41E4698F800D56FBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		293D19761E46BF540093B368 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		29A690AD1E469F99001FAE21 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		EDA08D4036295E02D712D57E /* Pods-glucagon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-glucagon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-glucagon/Pods-glucagon.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +73,7 @@
 				293022C01E4698F100D56FBF /* AppDelegate.swift */,
 				293022C21E4698F100D56FBF /* FirstViewController.swift */,
 				293022C41E4698F100D56FBF /* SecondViewController.swift */,
+				293D19761E46BF540093B368 /* ThirdViewController.swift */,
 				293022C61E4698F100D56FBF /* Main.storyboard */,
 				293022C91E4698F200D56FBF /* Assets.xcassets */,
 				293022CB1E4698F200D56FBF /* LaunchScreen.storyboard */,
@@ -211,7 +214,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -223,6 +226,7 @@
 			files = (
 				293022C51E4698F100D56FBF /* SecondViewController.swift in Sources */,
 				293022C11E4698F100D56FBF /* AppDelegate.swift in Sources */,
+				293D19771E46BF540093B368 /* ThirdViewController.swift in Sources */,
 				293022C31E4698F100D56FBF /* FirstViewController.swift in Sources */,
 				29A690AE1E469F99001FAE21 /* SwiftyJSON.swift in Sources */,
 			);
