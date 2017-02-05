@@ -10,6 +10,7 @@ target 'glucagon' do
 
   pod 'Firebase/Database'
 
+	pod 'Charts'
 pod ‘Firebase’
 
 end

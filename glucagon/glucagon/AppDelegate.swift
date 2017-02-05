@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
+import Charts
 
 var rootRef = FIRDatabase.database().reference()
 
