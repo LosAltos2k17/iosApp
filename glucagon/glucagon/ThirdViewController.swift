@@ -7,8 +7,15 @@
 //
 
 import UIKit
+import Firebase
 
-class ThirdViewController: UIViewController {
+
+class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    //let ref: Firebase?
+    @IBOutlet weak var tableView: UITableView!
+    
+    let animals = ["Cat", "Dog", "Cow", "Mulval"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +23,16 @@ class ThirdViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "dayCell", for: indexPath)
+        //cell.textLabel?.text = animals[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return animals.count
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

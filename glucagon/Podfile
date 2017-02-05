@@ -8,4 +8,6 @@ target 'glucagon' do
   # Pods for glucagon
 	pod 'Firebase/Core'
 
+  pod 'Firebase/Database'
+
 end
