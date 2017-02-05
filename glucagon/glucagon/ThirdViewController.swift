@@ -51,7 +51,7 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
             let objects = JSON(snapshot.value)
             //print(objects)
             user = "\(objects["username"].string!)"
-            self.userLabel.text = "Hello \(user)"
+            self.userLabel.text = "Hello \(user!)"
             self.userLabel.sizeToFit()
 
             var mDate = "";
@@ -107,9 +107,9 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
             //let image: UIImage = UIImage(data: NSData(contentsOfURL: NSURL(string: data.questionImage)!)!)!
             //cell.problemImageView.image = image
             //print(data?.date)
-            cell?.date.text = "Date: \(data?.date)"
-            cell?.meal.text = "Meal: \(data?.item)"
-            cell?.calories.text = "Calories: \(data?.cals)"
+            cell?.date.text = "Date: \(data!.date!)"
+            cell?.meal.text = "Meal: \(data!.item!)"
+            cell?.calories.text = "Calories: \(data!.cals!)"
             cell?.date.sizeToFit()
              cell?.meal.sizeToFit()
             cell?.calories.sizeToFit()
