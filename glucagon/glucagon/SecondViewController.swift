@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class SecondViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
@@ -67,43 +68,15 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
         let imageData = UIImagePNGRepresentation(image)
         let dataStr = imageData!.base64EncodedString(options: [.lineLength64Characters])
         print(dataStr)
-        let parameters = ["pic": dataStr] as Dictionary<String, String>
-        let url = URL(string: "https://los-altos-hacks-2-nihaleg.c9users.io/pic")!
-        let session = URLSession.shared
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        
-        do {
-            request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
+        let parameters = ["pic":dataStr]
+        Alamofire.request("https://httpbin.org/post", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
             
-        } catch let error {
-            print(error.localizedDescription)
+            if let JSON = response.result.value {
+                print (JSON)
+            }
         }
         
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        
-        let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
-            
-            guard error == nil else {
-                return
-            }
-            
-            guard let data = data else {
-                return
-            }
-            
-            do {
-                if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
-                    print(json)
-                }
-                
-            } catch let error {
-                print(error.localizedDescription)
-            }
-        })
-        task.resume()
+
     }
 }
 

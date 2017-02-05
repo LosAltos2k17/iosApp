@@ -11,6 +11,7 @@ target 'glucagon' do
   pod 'Firebase/Database'
 
 	pod 'Charts'
+pod 'Alamofire', '~> 4.3'
 pod ‘Firebase’
 
 end
